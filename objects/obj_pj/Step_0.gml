@@ -9,74 +9,43 @@ if(state == stateId.IDLE) {
 	hspeed = 0;
 	vspeed = 0;
 	
-	if(top xor down) {
-		if(top)	{
-			dir = directionId.BACK;
-			hspeed = 0;
-			vspeed = -vSpeed;
-			state = stateId.WALK;
-		} else {
-			dir = directionId.FRONT;
-			hspeed = 0;
-			vspeed = vSpeed;
-			state = stateId.WALK;
-		}
-	}
-
-	if(right xor left) {
-		if(right) {
-			dir = directionId.RIGHT;
-			hspeed = hSpeed;
-			vspeed = 0;
-			state = stateId.WALK;
-		} else {
-			dir = directionId.LEFT;
-			hspeed = -hSpeed;
-			vspeed = 0;
-			state = stateId.WALK;
-		}
-	}
-	
 	state = stateId.IDLE;
+	scrAnimationsSprites("spr_ch01_idle_", dir);
 }
-#endregion
 
-#region Animations Sprite Player
-if(state == stateId.WALK) {
-	switch(dir) {
-		case directionId.BACK:
-			sprite_index = spr_move_back;
-			break;
-			
-		case directionId.FRONT:
-			sprite_index = spr_move_front;
-			break;
-			
-		case directionId.RIGHT:
-			sprite_index = spr_move_right;
-			break;
-			
-		case directionId.LEFT:
-			sprite_index = spr_move_left;
-			break;
+if(top xor down) {
+	if(top)	{
+		dir = directionId.BACK;
+		hspeed = 0;
+		vspeed = -vSpeed;
+		state = stateId.WALK;
+		scrAnimationsSprites("spr_ch01_move_", dir);
+	} else if(down) {
+		dir = directionId.FRONT;
+		hspeed = 0;
+		vspeed = vSpeed;
+		state = stateId.WALK;
+		scrAnimationsSprites("spr_ch01_move_", dir);
 	}
-} else {
-	switch(dir) {
-		case directionId.BACK:
-			sprite_index = spr_idle_back;
-			break;
-			
-		case directionId.FRONT:
-			sprite_index = spr_idle_front;
-			break;
-			
-		case directionId.RIGHT:
-			sprite_index = spr_idle_right;
-			break;
-			
-		case directionId.LEFT:
-			sprite_index = spr_idle_left;
-			break;
+} else if (!right && !left) {
+	state = stateId.IDLE;	
+}
+
+if(right xor left) {
+	if(right) {
+		dir = directionId.RIGHT;
+		hspeed = hSpeed;
+		vspeed = 0;
+		state = stateId.WALK;
+		scrAnimationsSprites("spr_ch01_move_", dir);
+	} else if(left) {
+		dir = directionId.LEFT;
+		hspeed = -hSpeed;
+		vspeed = 0;
+		state = stateId.WALK;
+		scrAnimationsSprites("spr_ch01_move_", dir);
 	}
+} else if (!top && !down) {
+	state = stateId.IDLE;	
 }
 #endregion
