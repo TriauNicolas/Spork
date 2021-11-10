@@ -7,6 +7,7 @@
     {"id":{"name":"spr_ch01_move_back","path":"sprites/spr_ch01_move_back/spr_ch01_move_back.yy",},"order":3,},
     {"id":{"name":"spr_tileset_test","path":"sprites/spr_tileset_test/spr_tileset_test.yy",},"order":0,},
     {"id":{"name":"spr_ch01_move_left","path":"sprites/spr_ch01_move_left/spr_ch01_move_left.yy",},"order":2,},
+    {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"order":1,},
     {"id":{"name":"spr_ch01_idle_front","path":"sprites/spr_ch01_idle_front/spr_ch01_idle_front.yy",},"order":3,},
     {"id":{"name":"spr_ch01_idle_right","path":"sprites/spr_ch01_idle_right/spr_ch01_idle_right.yy",},"order":1,},
     {"id":{"name":"spr_ch01_attack_back","path":"sprites/spr_ch01_attack_back/spr_ch01_attack_back.yy",},"order":3,},
