@@ -16,6 +16,7 @@
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_pj","path":"objects/obj_pj/obj_pj.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":672.0,"y":384.0,"resourceVersion":"1.0","name":"inst_508B5E30","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":-32.0,"y":0.0,"resourceVersion":"1.0","name":"inst_245F0B78","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"obj_test_mob","path":"objects/obj_test_mob/obj_test_mob.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":832.0,"y":384.0,"resourceVersion":"1.0","name":"inst_1DCBECEC","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"tilesetId":{"name":"ts_test","path":"tilesets/ts_test/ts_test.yy",},"x":0,"y":0,"tiles":{"SerialiseWidth":57,"SerialiseHeight":32,"TileSerialiseData":[
 97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,97,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,69,
@@ -57,8 +58,9 @@
   "creationCodeFile": "",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_508B5E30","path":"rooms/Room1/Room1.yy",},
-    {"name":"inst_245F0B78","path":"rooms/Room1/Room1.yy",},
+    {"name":"inst_508B5E30","path":"rooms/rm_testlevel/rm_testlevel.yy",},
+    {"name":"inst_245F0B78","path":"rooms/rm_testlevel/rm_testlevel.yy",},
+    {"name":"inst_1DCBECEC","path":"rooms/rm_testlevel/rm_testlevel.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
@@ -86,7 +88,7 @@
     "path": "folders/Rooms.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Room1",
+  "name": "rm_testlevel",
   "tags": [],
   "resourceType": "GMRoom",
 }

@@ -14,7 +14,7 @@ function scrAnimationsSprites() {
 			break;
 		
 		case 2:
-			dirName = "right";
+			dirName = "right"; 
 			break;
 			
 		case 3:
@@ -26,6 +26,5 @@ function scrAnimationsSprites() {
 			break;
 	}
 	
-	show_debug_message(sprName + dirName)
 	sprite_index = asset_get_index(sprName + dirName);
 }

@@ -1,12 +1,15 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_ch01_attack_front",
+    "path": "sprites/spr_ch01_attack_front/spr_ch01_attack_front.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "Template_solid",
-    "path": "objects/Template_solid/Template_solid.yy",
+    "name": "Template_mobs",
+    "path": "objects/Template_mobs/Template_mobs.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -20,18 +23,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "PJ",
-    "path": "folders/Objects/PJ.yy",
+    "name": "Mobs",
+    "path": "folders/Objects/TemplateObj/Mobs.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_pj",
+  "name": "obj_test_mob",
   "tags": [],
   "resourceType": "GMObject",
 }

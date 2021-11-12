@@ -1,6 +1,6 @@
 // Smooth transition to move the camera where the player goes
-global.cameraX += (xTo - global.cameraX) / 10;
-global.cameraY += (yTo - global.cameraY) / 10;
+global.cameraX += (xTo - global.cameraX) / 5;
+global.cameraY += (yTo - global.cameraY) / 5;
 
 if(instance_exists(target)) {
 	xTo = target.x - (cameraWidth / 2);
