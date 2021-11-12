@@ -20,18 +20,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "PJ",
-    "path": "folders/Objects/PJ.yy",
+    "name": "Parents",
+    "path": "folders/Objects/TemplateObj/Parents.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_pj",
+  "name": "Template_mobs",
   "tags": [],
   "resourceType": "GMObject",
 }
