@@ -11,48 +11,48 @@ var collisionXSpeed = 0;
 var collisionYSpeed = 0;
 
 #region Moves
-if(hspeed == 0 && vspeed == 0) {
-	state = stateId.IDLE;
-	scrAnimationsSprites("spr_ch01_idle_", dir);
-}
-
 // Direction movements
 freeVSpeed = vSpeed * (down - top);
 freeHSpeed = hSpeed * (right - left);
 
-if(hspeed > 0) {
+if(freeHSpeed > 0) {
 	dir = directionId.RIGHT;
 	state = stateId.WALK;
 	scrAnimationsSprites("spr_ch01_move_", dir);
-} else if(hspeed < 0) {
+} else if(freeHSpeed < 0) {
 	dir = directionId.LEFT;
 	state = stateId.WALK;
 	scrAnimationsSprites("spr_ch01_move_", dir);
 }
 
-if(vspeed > 0) {
+if(freeVSpeed > 0) {
 	dir = directionId.FRONT;
 	state = stateId.WALK;
 	scrAnimationsSprites("spr_ch01_move_", dir);
-} else if(vspeed < 0) {
+} else if(freeVSpeed < 0) {
 	dir = directionId.BACK;
 	state = stateId.WALK;
 	scrAnimationsSprites("spr_ch01_move_", dir);
 }
 
+// IDLE
+if(freeHSpeed == 0 && freeVSpeed == 0) {
+	state = stateId.IDLE;
+	scrAnimationsSprites("spr_ch01_idle_", dir);
+}
+
 #endregion
 
 #region Collisions
-
 // Checking horizontal collision
 if(place_meeting(x + freeHSpeed, y, Template_mobs)) {
-	if(sign((Template_mobs.x - x)) > 0){
+	if(sign((Template_mobs.x - x)) > 0) {
 		collisionXSpeed = (Template_mobs.bbox_left - bbox_right) - 1;
-	}else{
+	} else {
 		collisionXSpeed = (Template_mobs.bbox_right - bbox_left) + 1;
 	}
 	x += collisionXSpeed;
-}else{
+} else {
 	x += freeHSpeed;
 }
 
@@ -60,16 +60,11 @@ if(place_meeting(x + freeHSpeed, y, Template_mobs)) {
 if(place_meeting(x, y + freeVSpeed, Template_mobs)) {
 	if(sign((Template_mobs.y - y)) > 0){
 		collisionYSpeed = (Template_mobs.bbox_top - bbox_bottom) - 1;
-	}else{
+	} else {
 		collisionYSpeed = (Template_mobs.bbox_bottom - bbox_top) + 1;
 	}
 	y += collisionYSpeed;
-}else{
-	y += freeVSpeed;	
+} else {
+	y += freeVSpeed;
 }
-
-
-
-
-
 #endregion
