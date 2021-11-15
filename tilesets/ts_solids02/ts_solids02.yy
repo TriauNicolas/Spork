@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_tileset_test",
-    "path": "sprites/spr_tileset_test/spr_tileset_test.yy",
+    "name": "spr_tileset_solids02",
+    "path": "sprites/spr_tileset_solids02/spr_tileset_solids02.yy",
   },
   "tileWidth": 24,
   "tileHeight": 24,
@@ -1056,11 +1056,11 @@
     "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy",
+    "name": "Solids",
+    "path": "folders/Tile Sets/Solids.yy",
   },
   "resourceVersion": "1.0",
-  "name": "ts_test",
+  "name": "ts_solids02",
   "tags": [],
   "resourceType": "GMTileSet",
 }

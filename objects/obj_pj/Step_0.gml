@@ -45,26 +45,47 @@ if(freeHSpeed == 0 && freeVSpeed == 0) {
 
 #region Collisions
 // Checking horizontal collision
-if(place_meeting(x + freeHSpeed, y, Template_mobs)) {
-	if(sign((Template_mobs.x - x)) > 0) {
-		collisionXSpeed = (Template_mobs.bbox_left - bbox_right) - 1;
+if(place_meeting(x + freeHSpeed, y, Template_solid)) {
+	var currentObjH = instance_place(x + freeHSpeed, y, Template_solid)
+	show_debug_message("hits h");
+	if(sign((currentObjH.x - x)) > 0) {
+		collisionXSpeed = (currentObjH.bbox_left - bbox_right) - 1;
 	} else {
-		collisionXSpeed = (Template_mobs.bbox_right - bbox_left) + 1;
+		collisionXSpeed = (currentObjH.bbox_right - bbox_left) + 1;
 	}
+	show_debug_message(collisionXSpeed);
 	x += collisionXSpeed;
 } else {
 	x += freeHSpeed;
 }
 
 // Checking vertical collision
-if(place_meeting(x, y + freeVSpeed, Template_mobs)) {
-	if(sign((Template_mobs.y - y)) > 0){
-		collisionYSpeed = (Template_mobs.bbox_top - bbox_bottom) - 1;
+if(place_meeting(x, y + freeVSpeed, Template_solid)) {
+	var currentObjV = instance_place(x, y + freeVSpeed, Template_solid)
+	show_debug_message("hits v");
+	if(sign((currentObjV.y - y)) > 0) {
+		collisionYSpeed = (currentObjV.bbox_top - bbox_bottom) - 1;
 	} else {
-		collisionYSpeed = (Template_mobs.bbox_bottom - bbox_top) + 1;
+		collisionYSpeed = (currentObjV.bbox_bottom - bbox_top) + 1;
 	}
+	show_debug_message(collisionYSpeed); //18
 	y += collisionYSpeed;
 } else {
 	y += freeVSpeed;
+}
+#endregion
+
+#region Cheat Codes
+decreaseSpeed = keyboard_check(ord("A"));
+increaseSpeed = keyboard_check(ord("E"));
+
+if(increaseSpeed) {
+	hSpeed += 1;
+	vSpeed += 1;
+}
+
+if(decreaseSpeed) {
+	hSpeed -= 1;
+	vSpeed -= 1;		
 }
 #endregion
