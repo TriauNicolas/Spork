@@ -50,7 +50,7 @@ if(place_meeting(x + freeHSpeed, y, Template_solid)) {
 	if(sign((currentObjH.x - x)) > 0) {
 		collisionXSpeed = (currentObjH.bbox_left - bbox_right) - 2;
 	} else {
-		collisionXSpeed = (currentObjH.bbox_right - bbox_left) + 1;
+		collisionXSpeed = (currentObjH.bbox_right - bbox_left) + 2;
 	}
 	x += collisionXSpeed;
 } else {
@@ -63,7 +63,7 @@ if(place_meeting(x, y + freeVSpeed, Template_solid)) {
 	if(sign((currentObjV.y - y)) > 0) {
 		collisionYSpeed = (currentObjV.bbox_top - bbox_bottom) - 2;
 	} else {
-		collisionYSpeed = (currentObjV.bbox_bottom - bbox_top) + 1;
+		collisionYSpeed = (currentObjV.bbox_bottom - bbox_top) + 2;
 	}
 	y += collisionYSpeed;
 } else {
