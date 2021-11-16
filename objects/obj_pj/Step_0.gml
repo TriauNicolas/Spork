@@ -46,14 +46,12 @@ if(freeHSpeed == 0 && freeVSpeed == 0) {
 #region Collisions
 // Checking horizontal collision
 if(place_meeting(x + freeHSpeed, y, Template_solid)) {
-	var currentObjH = instance_place(x + freeHSpeed, y, Template_solid)
-	show_debug_message("hits h");
+	var currentObjH = instance_place(x + freeHSpeed, y, Template_solid);
 	if(sign((currentObjH.x - x)) > 0) {
-		collisionXSpeed = (currentObjH.bbox_left - bbox_right) - 1;
+		collisionXSpeed = (currentObjH.bbox_left - bbox_right) - 2;
 	} else {
 		collisionXSpeed = (currentObjH.bbox_right - bbox_left) + 1;
 	}
-	show_debug_message(collisionXSpeed);
 	x += collisionXSpeed;
 } else {
 	x += freeHSpeed;
@@ -61,14 +59,12 @@ if(place_meeting(x + freeHSpeed, y, Template_solid)) {
 
 // Checking vertical collision
 if(place_meeting(x, y + freeVSpeed, Template_solid)) {
-	var currentObjV = instance_place(x, y + freeVSpeed, Template_solid)
-	show_debug_message("hits v");
+	var currentObjV = instance_place(x, y + freeVSpeed, Template_solid);
 	if(sign((currentObjV.y - y)) > 0) {
-		collisionYSpeed = (currentObjV.bbox_top - bbox_bottom) - 1;
+		collisionYSpeed = (currentObjV.bbox_top - bbox_bottom) - 2;
 	} else {
 		collisionYSpeed = (currentObjV.bbox_bottom - bbox_top) + 1;
 	}
-	show_debug_message(collisionYSpeed); //18
 	y += collisionYSpeed;
 } else {
 	y += freeVSpeed;
