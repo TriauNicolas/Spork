@@ -6,7 +6,7 @@
     "path": "folders/Scripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_animationsSprites",
+  "name": "scr_attack_sent",
   "tags": [],
   "resourceType": "GMScript",
 }
